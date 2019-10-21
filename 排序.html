@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>for</title>
+</head>
+<body>
+	
+</body>
+<script type="text/javascript">
+	
+
+
+   /*
+	  
+	*****
+	****
+	***
+	**
+	*
+	 
+	*/
+
+	var  arr = [1,10,100,22,45,87,324,999,99,9];
+
+
+	//冒泡排序   相邻两个元素 两两比较 
+	
+
+	function bubbleSort(arr){
+		for (var i = 0; i < arr.length-1; i++) {//  比较的轮次
+		   	for (var j = 0; j < arr.length-1-i; j++) {//内层循环控制列--一行的个数
+		   		if (arr[j]>arr[j+1]) {//相邻两个元素 两两比较
+		   			// var temp = arr[j];
+		   			// arr[j] = arr[j+1];
+		   			// arr[j+1] = temp;	
+		   			swap(arr,j,j+1)		
+		   		}		   		
+	   		}	
+	   		 		
+	   }	
+	   return arr;	
+	}
+
+
+	//选择排序   拿每个元素  分别跟它后边的所有元素依次进行比较
+
+	function selectSort(arr){
+		for (var i = 0; i < arr.length-1; i++) {//  比较的轮次
+		   	for (var j = i+1; j < arr.length; j++) {//内层循环控制列--一行的个数
+		   		if (arr[i]>arr[j]) {//相邻两个元素 两两比较		   			
+		   			swap(arr,i,j)		
+		   		}		   		
+	   		}	
+	   		 		
+	   }	
+	   return arr;	
+	}
+
+
+	function swap(arr,i,j){
+		var temp = arr[i];
+		arr[i] = arr[j];
+		arr[j] = temp;	
+	}
+
+
+	 // console.log(bubbleSort(arr));
+	 
+	 console.log(selectSort(arr));
+
+
+
+
+
+
+   
+
+
+</script>
+</html>
